@@ -1,0 +1,18 @@
+body {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+img {
+  width: minmax(450px, 50vw);
+  display: block;
+}
+
+div {
+  margin-left: auto;
+}
+
+label {
+  display: block;
+  margin-left: auto;
+}
