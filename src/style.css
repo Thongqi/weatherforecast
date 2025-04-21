@@ -1,12 +1,48 @@
+@font-face {
+  font-family: 'alpha_echo';
+  src: url('./alpha_echo.ttf');
+}
+
+@font-face {
+  font-family: 'amatic';
+  src: url('./AmaticSC-Regular.ttf');
+}
+
 body {
   margin: 5rem auto;
   text-align: center;
+  font-family: "amatic";
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #AAB2FF;
+}
+
+input, label, button{
+  font-family: inherit;
+  font-size: 1.3rem;
+}
+
+input{
+  width: 150px;
+}
+
+button {
+  background-color: #84FFC9;
+}
+
+h1 {
+  font-family: "alpha_echo";
+  color:#feffff;
 }
 
 img {
   width: minmax(450px, 50vw);
   display: block;
   margin: auto;
+}
+
+p{
+  height: 2rem;
 }
 
 div {

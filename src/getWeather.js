@@ -12,13 +12,16 @@ export async function getWeather(
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date}?key=${WEATHERAPIKEY}`
     );
-    const weatherData = await response.json();
-    return weatherData.currentConditions.conditions;
-  } catch (error){
-    if (error instanceof TypeError){
-      document.querySelector("#search-err").innerHTML = "Not a valid location...";
-      return 'what';
+    if (!response.ok){
+      throw new Error()
+    } else {
+      const weatherData = await response.json();
+      return weatherData.currentConditions.conditions;
     }
+    
+  } catch (error){
+    document.querySelector("#search-err").innerHTML = "Not a valid location...";
+    return 'what';
   }
   
 }
