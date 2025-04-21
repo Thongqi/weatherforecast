@@ -9,9 +9,11 @@ export async function getWeather(
   try{
     document.querySelector("#search-err").innerHTML = "";
     console.log(location);
+
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date}?key=${WEATHERAPIKEY}`
     );
+
     if (!response.ok){
       throw new Error()
     } else {
