@@ -4,8 +4,9 @@ const img = document.querySelector("img");
 export async function fetchimg(q = "weather") {
   try {
     const inp = document.querySelector("input").value;
+    console.log(inp.length);
     if (inp.length > 0) {
-      q = inp;
+      q = await getWeather(inp);
     } else {
       q = await getWeather();
     }
@@ -19,8 +20,11 @@ export async function fetchimg(q = "weather") {
     const giphydata = await response.json();
 
     img.src = giphydata.data.images.original.url;
+
   } catch (error) {
+
     console.log(error);
     document.querySelector("#err-msg").innerHTML = "No giphy found";
+    
   }
 }

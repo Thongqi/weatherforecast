@@ -6,10 +6,11 @@ body {
 img {
   width: minmax(450px, 50vw);
   display: block;
+  margin: auto;
 }
 
 div {
-  margin-left: auto;
+  margin: 2rem auto;
 }
 
 label {
