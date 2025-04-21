@@ -6,7 +6,7 @@ export async function getWeather(
   location = "Malaysia",
   date = format(new Date(), "yyyy-MM-dd")
 ) {
-  try{
+  try {
     document.querySelector("#search-err").innerHTML = "";
     console.log(location);
 
@@ -14,16 +14,14 @@ export async function getWeather(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/${date}?key=${WEATHERAPIKEY}`
     );
 
-    if (!response.ok){
-      throw new Error()
+    if (!response.ok) {
+      throw new Error();
     } else {
       const weatherData = await response.json();
       return weatherData.currentConditions.conditions;
     }
-    
-  } catch (error){
+  } catch (error) {
     document.querySelector("#search-err").innerHTML = "Not a valid location...";
-    return 'what';
+    return "what";
   }
-  
 }

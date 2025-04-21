@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'alpha_echo';
-  src: url('./alpha_echo.ttf');
+  font-family: "alpha_echo";
+  src: url("./alpha_echo.ttf");
 }
 
 @font-face {
-  font-family: 'amatic';
-  src: url('./AmaticSC-Regular.ttf');
+  font-family: "amatic";
+  src: url("./AmaticSC-Regular.ttf");
 }
 
 body {
@@ -14,25 +14,27 @@ body {
   font-family: "amatic";
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: #AAB2FF;
+  background-color: #aab2ff;
 }
 
-input, label, button{
+input,
+label,
+button {
   font-family: inherit;
   font-size: 1.3rem;
 }
 
-input{
+input {
   width: 150px;
 }
 
 button {
-  background-color: #84FFC9;
+  background-color: #84ffc9;
 }
 
 h1 {
   font-family: "alpha_echo";
-  color:#feffff;
+  color: #feffff;
 }
 
 img {
@@ -41,7 +43,7 @@ img {
   margin: auto;
 }
 
-p{
+p {
   height: 2rem;
 }
 
@@ -58,7 +60,7 @@ label {
   position: relative;
 }
 
-.loader{
+.loader {
   position: absolute;
   top: 35%;
   left: 48%;
@@ -71,12 +73,19 @@ label {
 }
 
 @keyframes spinner {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
 @-webkit-keyframes spinner {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
